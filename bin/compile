@@ -37,6 +37,8 @@ else
 
   echo "-----> autogen.sh"
   ./autogen.sh
+  ./autogen.sh
+  ls
 
   echo "-----> Configuring"
   cd $BUILD_DIR/src
