@@ -35,9 +35,12 @@ else
   rm $tgz
   mv $release src
 
+  echo "-----> autogen.sh"
+  ./autogen.sh
+
   echo "-----> Configuring"
   cd $BUILD_DIR/src
-  ./configure --prefix=$BUILD_DIR 2>&1 1>/dev/null | indent
+  ./configure --enable-run-from-source --prefix=$BUILD_DIR 2>&1 1>/dev/null | indent
 
   echo "-----> Compiling"
   make 2>&1 1>/dev/null | indent
