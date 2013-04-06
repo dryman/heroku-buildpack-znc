@@ -5,4 +5,4 @@ for f in $HOME/.znc/configs/*.conf; do
   cp $f.new $f
 done
 
-exec bin/znc -f
+exec bin/znc --foreground --no-color
